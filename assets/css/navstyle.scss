@@ -1,0 +1,30 @@
+body{
+background-color: white;
+    section{
+        background-color: black;
+        height: 3rem;
+        div{
+            
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 2%;
+            margin-right: 2%;
+            font-size: 1.45rem;
+            .logo{
+
+            }
+            .elem{
+                width: 15rem;
+                justify-content: space-between;
+                div{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}

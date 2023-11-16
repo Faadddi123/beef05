@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(to right, #c627db 0%, #43cedb 50%, #1459ce 100%);
+}
+body section .mini_table {
+  padding-right: 4%;
+  padding-left: 3%;
+  background-color: black;
+  color: white;
+  margin: auto;
+  width: 25rem;
+  height: 30rem;
+  margin-top: 7.5%;
+  border-radius: 10%;
+}
+body section .mini_table h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+body section .mini_table div {
+  width: 100%;
+  display: flex;
+  font-size: 1.4rem;
+  margin-top: 10%;
+}
+body section .mini_table div input {
+  background-color: black;
+  border-bottom: white;
+  border-width: 3px;
+  color: white;
+  border-color: white;
+}
+body section .mini_table div button {
+  font-size: 2rem;
+  margin: 10% auto;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  -webkit-box-decoration-break: none;
+          box-decoration-break: none;
+  justify-content: center;
+  text-align: center;
+}
+body section .mini_table div button :hover {
+  font-size: 5rem;
+  margin: 10% auto;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  -webkit-box-decoration-break: none;
+          box-decoration-break: none;
+  justify-content: center;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

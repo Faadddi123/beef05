@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+}
+body section {
+  background-color: black;
+  height: 3rem;
+}
+body section div {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: 1.45rem;
+}
+body section div .elem {
+  width: 15rem;
+  justify-content: space-between;
+}
+body section div .elem div a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=navstyle.css.map */
