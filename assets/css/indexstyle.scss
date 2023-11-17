@@ -5,64 +5,67 @@ body{
     #1459ce 100%
     ) ;
     section{
-        .mini_table{
-            padding-right: 4%;
-            padding-left: 3%;
-            background-color: black;
-            color: white;
-            margin: auto;
-            width: 25rem;
-            height: 30rem;
-            margin-top: 7.5%;
-            border-radius: 10%;
-            h1{
-                text-align: center;
-                font-size: 3rem;
-            }
-            
-            div{
-                width: 100%;
-                display: flex;
-                font-size: 1.4rem;
-                margin-top: 10%;
-                input{
-
-                        background-color: black;
-                        border-bottom: white;
-                        border-width: 3px;
-                        
-                        color: white;
-                        border-color: white;
+        form{
+            .mini_table{
+                padding-right: 4%;
+                padding-left: 3%;
+                background-color: black;
+                color: white;
+                margin: auto;
+                width: 25rem;
+                height: 30rem;
+                margin-top: 7.5%;
+                border-radius: 10%;
+                h1{
+                    text-align: center;
+                    font-size: 3rem;
                 }
-                a{  
+                
+                div{
                     width: 100%;
-                    height: 100%;
-                    button{
-                        font-size: 2rem;
-                        margin: 10% auto;
-                        text-decoration: none;
-                        background-color: white;
-                        color: black;
-                        box-decoration-break: none;
-                        justify-content: center;
-                        text-align: center;
+                    display: flex;
+                    font-size: 1.4rem;
+                    margin-top: 10%;
+                    input{
     
+                            background-color: black;
+                            border-bottom: white;
+                            border-width: 3px;
+                            
+                            color: white;
+                            border-color: white;
                     }
-                    button :hover{
-                        font-size: 5rem;
-                        margin: 10% auto;
-                        text-decoration: none;
-                        background-color: white;
-                        color: black;
-                        box-decoration-break: none;
-                        justify-content: center;
-                        text-align: center;
-    
+                    a{  
+                        width: 100%;
+                        height: 100%;
+                        button{
+                            font-size: 2rem;
+                            margin: 10% auto;
+                            text-decoration: none;
+                            background-color: white;
+                            color: black;
+                            box-decoration-break: none;
+                            justify-content: center;
+                            text-align: center;
+        
+                        }
+                        button :hover{
+                            font-size: 5rem;
+                            margin: 10% auto;
+                            text-decoration: none;
+                            background-color: white;
+                            color: black;
+                            box-decoration-break: none;
+                            justify-content: center;
+                            text-align: center;
+        
+                        }
                     }
+                    
                 }
                 
             }
-            
         }
+        
     }
 }   
