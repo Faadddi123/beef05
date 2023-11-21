@@ -13,7 +13,8 @@
   $user = 'root';
   $pass = '123';
   $dbname = 'ELECTRONACER';
-
+  $counter = '0';
+  $counter2 = '1';
   // Create connection
   $conn = new mysqli($servername, $user, $pass, $dbname);
 
@@ -30,61 +31,78 @@
     $sql = "SELECT * FROM product";
     $result = $conn->query($sql);
     
-    if ($result->num_rows > 0) {
-        echo "<table border='1'>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <!-- Add more columns as needed -->
-            </tr>";
-    
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>
-                <td>" . $row['id'] . "</td>
-                <td>" . $row['name'] . "</td>
-                <td>" . $row['price'] . "</td>
-                <!-- Add more cells as needed -->
-            </tr>";
-        }
-    
-        echo "</table>";
-    } else {
-        echo "0 results";
-    }
-    
-    $conn->close(); 
-  
-
   ?>
 
     <section>
-        <div class="mini_titre">OurOrder</div>
-        <div class="jma3a">
-            
-            
-            
-            
-            <div class="container">
-                <div class="overlay">
-                  <div class = "items"></div>
-                  <div class = "items head">
-                    <p>Flower Embroidery Hoop Art</p>
-                    <hr>
+      <!-- ...........kfkb -->
+      <form method="post">
+    <button type="submit" name="button1">Button 1</button>
+    <button type="submit" name="button2">Button 2</button>
+    <button type="submit" name="button3">Button 3</button>
+</form>
+    <div class=". mini_titre .">our products</div>
+    
+    <?php
+    // dddddd
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      if (isset($_POST['button1'])) {
+          $variable = 1;
+      } elseif (isset($_POST['button2'])) {
+          $variable = 2;
+      } elseif (isset($_POST['button3'])) {
+          $variable = 3;
+      }
+      echo "Variable assigned: " . $variable;
+  }
+  // dddddddd
+  
+    if ($result->num_rows > 0) {
+      $counter2 = $result->num_rows;
+      while ( $counter2 > 0){
+        echo '
+        <div class="jma3a">';
+      
+        while ($counter < 4 && $row = $result->fetch_assoc()) {
+          
+          if ($row['category'] == $variable){
+            echo '
+                <div class="container">
+                    <div class="overlay">
+                      <div class = "items">' . $row['id'] . '</div>
+                      <div class = "items head">
+                        <p>' . $row['name'] . '</p>
+                        <hr>
+                      </div>
+                      <div class = "items price">
+                        <p class="old">' . $row['old_price'] . '$</p>
+                        <p class="new">' . $row['new_price'] . '$</p>
+                      </div>
+                      <div class="items cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>' . $row['category'] . '</span>
+                    </div>
                   </div>
-                  <div class = "items price">
-                    <p class="old">$699</p>
-                    <p class="new">$345</p>
-                  </div>
-                  <div class="items cart">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span>ADD TO CART</span>
                 </div>
-              </div>
-            </div>
+                
+                
+            ';
+            $counter ++;
             
-            
-        </div>
+          }
+          $counter2--;
+        }
+        $counter = 0;
+        echo '</div>';
+      }
+      
+  } else {
+      echo "0 results";
+  }
+
+  
+  $conn->close();     
+    ?>
+    
     </section>
 </body>
 </html>
